@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Meme Generator</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                background: #F5FCFE;
+            }
+
+            .nav {
+                display: inline;
+                padding: 60px;
+            }
+
+            img {
+                border: 1px solid rgba(0,0,0,.125);
+                border-radius: .25rem;
+                }
+        </style>
+    </head>
+    <body>
+        
+<div class="card" style="width: 500px; max-width: 100%;">
+    <div class="card-body">
+        <form action="/create" method="POST">
+            <div class="form-group">
+                <label for="image_url">Image URL</label>
+                <input type="url" class="form-control" id="image_url" aria-describedby="image url" placeholder="Enter a url for an image" name="image_url">
+            </div>
+            <div class="form-group">
+                <label for="body">Quote Body</label>
+                <input type="text" class="form-control" id="body" aria-describedby="Quote Body" placeholder="To be or not to be" name="body">
+            </div>
+            <div class="form-group">
+                <label for="author">Quote Author</label>
+                <input type="text" class="form-control" id="author" aria-describedby="Quote Author" placeholder="Shakespeare" name="author">
+            </div>
+            <button type="submit" class="btn btn-primary">Create Meme!</button>
+        </form>
+    </div>
+</div>
+
+
+        <div class="nav">
+            <a class="btn btn-primary" href="/">Random</a>
+            <a class="btn btn-outline-primary" href="/create">Creator</a>    
+        </div>
+    </body>
+</html>
